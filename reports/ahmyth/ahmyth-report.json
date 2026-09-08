@@ -1,0 +1,379 @@
+{
+  "family": "Ahmyth",
+  "source_url": "https://github.com/quark-engine/apk-samples/raw/master/malware-samples/Ahmyth.apk",
+  "sha256": "f39b1a25c299ff532df840c6216fee41c8eb70787aba5e51624aae7b8eccc12c",
+  "apk_filename": "Ahmyth.apk",
+  "size_bytes": 268043,
+  "md5": "893e05aabd8754236ea70d3da8363d52",
+  "quark_version": "26.9.1",
+  "core_library": "dextrace",
+  "rules_repo": "https://github.com/quark-engine/quark-rules",
+  "rules_commit": "a9fb558fae4c9d23f325289396c06d7c5e519318",
+  "rules_dir": "rules",
+  "rules_loaded": 278,
+  "hit_criterion": "quark JSON crime confidence == 100% (all five stages)",
+  "command": "quark -a Ahmyth.apk -r quark-rules-a9fb558fae4c9d23f325289396c06d7c5e519318/rules -o report.json --core-library dextrace",
+  "threat_level": "High Risk",
+  "total_score": 2,
+  "hit_count": 42,
+  "expected_hit_ids": [
+    "00001",
+    "00002",
+    "00004",
+    "00005",
+    "00007",
+    "00008",
+    "00009",
+    "00010",
+    "00011",
+    "00012",
+    "00013",
+    "00014",
+    "00015",
+    "00017",
+    "00019",
+    "00026",
+    "00029",
+    "00077",
+    "00108",
+    "00115",
+    "00157",
+    "00182",
+    "00185",
+    "00186",
+    "00187",
+    "00188",
+    "00189",
+    "00191",
+    "00192",
+    "00193",
+    "00194",
+    "00195",
+    "00196",
+    "00197",
+    "00198",
+    "00199",
+    "00201",
+    "00212",
+    "00230",
+    "00269",
+    "00272",
+    "00276"
+  ],
+  "hits": [
+    {
+      "id": "00001",
+      "labels": [
+        "camera"
+      ],
+      "crime": "Initialize bitmap object and compress data (e.g. JPEG) into bitmap object"
+    },
+    {
+      "id": "00002",
+      "labels": [
+        "camera"
+      ],
+      "crime": "Open the camera and take picture"
+    },
+    {
+      "id": "00004",
+      "labels": [
+        "file",
+        "collection"
+      ],
+      "crime": "Get filename and put it to JSON object"
+    },
+    {
+      "id": "00005",
+      "labels": [
+        "file"
+      ],
+      "crime": "Get absolute path of file and put it to JSON object"
+    },
+    {
+      "id": "00007",
+      "labels": [
+        "file"
+      ],
+      "crime": "Use absolute path of directory for the output media file path"
+    },
+    {
+      "id": "00008",
+      "labels": [
+        "sms"
+      ],
+      "crime": "Check if successfully sending out SMS"
+    },
+    {
+      "id": "00009",
+      "labels": [
+        "file"
+      ],
+      "crime": "Put data in cursor to JSON object"
+    },
+    {
+      "id": "00010",
+      "labels": [
+        "sms",
+        "calllog",
+        "collection"
+      ],
+      "crime": "Read sensitive data(SMS, CALLLOG) and put it into JSON object"
+    },
+    {
+      "id": "00011",
+      "labels": [
+        "sms",
+        "calllog",
+        "collection"
+      ],
+      "crime": "Query data from URI (SMS, CALLLOGS)"
+    },
+    {
+      "id": "00012",
+      "labels": [
+        "file"
+      ],
+      "crime": "Read data and put it into a buffer stream"
+    },
+    {
+      "id": "00013",
+      "labels": [
+        "file"
+      ],
+      "crime": "Read file and put it into a stream"
+    },
+    {
+      "id": "00014",
+      "labels": [
+        "file"
+      ],
+      "crime": "Read file into a stream and put it into a JSON object"
+    },
+    {
+      "id": "00015",
+      "labels": [
+        "file"
+      ],
+      "crime": "Put buffer stream (data) to JSON object"
+    },
+    {
+      "id": "00017",
+      "labels": [
+        "location",
+        "collection"
+      ],
+      "crime": "Get Location of the device and append this info to a string"
+    },
+    {
+      "id": "00019",
+      "labels": [
+        "reflection"
+      ],
+      "crime": "Find a method from given class name, usually for reflection"
+    },
+    {
+      "id": "00026",
+      "labels": [
+        "reflection"
+      ],
+      "crime": "Method reflection"
+    },
+    {
+      "id": "00029",
+      "labels": [
+        "reflection"
+      ],
+      "crime": "Initialize class object dynamically"
+    },
+    {
+      "id": "00077",
+      "labels": [
+        "collection",
+        "sms",
+        "calllog",
+        "calendar"
+      ],
+      "crime": "Read sensitive data(SMS, CALLLOG, etc)"
+    },
+    {
+      "id": "00108",
+      "labels": [
+        "network",
+        "command"
+      ],
+      "crime": "Read the input stream from given URL"
+    },
+    {
+      "id": "00115",
+      "labels": [
+        "collection",
+        "location"
+      ],
+      "crime": "Get last known location of the device"
+    },
+    {
+      "id": "00157",
+      "labels": [
+        "reflection",
+        "dexClassLoader"
+      ],
+      "crime": "Instantiate new object using reflection, possibly used for dexClassLoader"
+    },
+    {
+      "id": "00182",
+      "labels": [
+        "camera"
+      ],
+      "crime": "Open camera."
+    },
+    {
+      "id": "00185",
+      "labels": [
+        "camera"
+      ],
+      "crime": "Start capturing camera preview frames to the screen"
+    },
+    {
+      "id": "00186",
+      "labels": [
+        "camera"
+      ],
+      "crime": "Control camera to take picture"
+    },
+    {
+      "id": "00187",
+      "labels": [
+        "collection",
+        "sms",
+        "calllog",
+        "calendar"
+      ],
+      "crime": "Query a URI and check the result"
+    },
+    {
+      "id": "00188",
+      "labels": [
+        "sms"
+      ],
+      "crime": "Get the address of a SMS message"
+    },
+    {
+      "id": "00189",
+      "labels": [
+        "sms"
+      ],
+      "crime": "Get the content of a SMS message"
+    },
+    {
+      "id": "00191",
+      "labels": [
+        "sms"
+      ],
+      "crime": "Get messages in the SMS inbox"
+    },
+    {
+      "id": "00192",
+      "labels": [
+        "sms"
+      ],
+      "crime": "Get messages in the SMS inbox"
+    },
+    {
+      "id": "00193",
+      "labels": [
+        "sms"
+      ],
+      "crime": "Send a SMS message"
+    },
+    {
+      "id": "00194",
+      "labels": [
+        "record"
+      ],
+      "crime": "Set the audio source (MIC) and recorded file format"
+    },
+    {
+      "id": "00195",
+      "labels": [
+        "record",
+        "file"
+      ],
+      "crime": "Set the output path of the recorded file"
+    },
+    {
+      "id": "00196",
+      "labels": [
+        "record",
+        "file"
+      ],
+      "crime": "Set the recorded file format and output path"
+    },
+    {
+      "id": "00197",
+      "labels": [
+        "record"
+      ],
+      "crime": "Set the audio encoder and initialize the recorder"
+    },
+    {
+      "id": "00198",
+      "labels": [
+        "record"
+      ],
+      "crime": "Initialize the recorder and start recording"
+    },
+    {
+      "id": "00199",
+      "labels": [
+        "record"
+      ],
+      "crime": "Stop recording and release recording resources"
+    },
+    {
+      "id": "00201",
+      "labels": [
+        "collection",
+        "calllog"
+      ],
+      "crime": "Query data from the call log"
+    },
+    {
+      "id": "00212",
+      "labels": [
+        "collection"
+      ],
+      "crime": "Query device data with ContentResolver"
+    },
+    {
+      "id": "00230",
+      "labels": [
+        "control"
+      ],
+      "crime": "Start a background service"
+    },
+    {
+      "id": "00269",
+      "labels": [
+        "screen"
+      ],
+      "crime": "Compress bitmap"
+    },
+    {
+      "id": "00272",
+      "labels": [
+        "reflection",
+        "evasion"
+      ],
+      "crime": "Resolve field via reflection"
+    },
+    {
+      "id": "00276",
+      "labels": [
+        "reflection"
+      ],
+      "crime": "Invoke method dynamically via reflection"
+    }
+  ],
+  "recorded_at": "2026-09-08 14:09 Asia/Taipei"
+}
